@@ -74,11 +74,11 @@
 
             <!-- Nav Item - Dampak Stunting -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="dampak.php" data-toggle="collapse" data-target="#collapseUtilities"
+                <div class="nav-link collapsed" href="dampak.php" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-heart-broken"></i>
-                    <span>Dampak Buruk Stunting</span>
-                </a>
+                    <a style="color:white;" href="dampak.blade.php"><span>Dampak buruk Stunting</span></a>
+                </div>
             </li>
 
 
