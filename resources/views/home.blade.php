@@ -67,7 +67,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Stunting :</h6>
                         <a class="collapse-item" href="buttons.html">Data Stunting</a>
-                        <a class="collapse-item" href="cards.html">Stunting di Indonesia</a>
+                        <a class="collapse-item" href="stunting.blade.php">Stunting di Indonesia</a>
                     </div>
                 </div>
             </li>
