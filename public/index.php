@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 
 define('LARAVEL_START', microtime(true));
 
-// Aku tambahin code di sini
+// Aku tambahin code di sini.
 
 /*
 |--------------------------------------------------------------------------
