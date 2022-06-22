@@ -395,7 +395,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 ID_anak</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $dk->id_anak }}</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{$dk   ->id_anak}}</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -557,39 +557,32 @@
 
                             <!-- Project Card Example -->
                             <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="small font-weight-bold">Server Migration <span
-                                            class="float-right">20%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%"
-                                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Sales Tracking <span
-                                            class="float-right">40%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%"
-                                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Customer Database <span
-                                            class="float-right">60%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar" role="progressbar" style="width: 60%"
-                                            aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Payout Details <span
-                                            class="float-right">80%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%"
-                                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Account Setup <span
-                                            class="float-right">Complete!</span></h4>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
-                                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                <!-- Card Header - Accordion -->
+                                <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse"
+                                    role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                                    <h6 class="m-0 font-weight-bold text-primary">Tambah Data Anak </h6>
+                                </a>
+                                <!-- Card Content - Collapse -->
+                                <div class="collapse hide" id="collapseCardExample">
+                                    <div class="card-body">
+                                        <form action="/home" method="post">
+                                            {{ csrf_field() }}
+                                            Nama <input type="text" name="nama" required="required"> <br/>
+                                            Umur <input type="number" name="umur" required="required"> <br/>
+                                            Panjang <input type="number" name="panjang" required="required"> <br/>
+                                            Berat <input type="number" name="berat" required="required"> <br/>
+                                            Jenis Kelamin<br/>
+                                                Laki-laki<input type="radio" name="jenis_kelamin" value="Laki-laki">
+                                                Perempuan<input type="radio" name="jenis_kelamin" value="Perempuan"> <br>
+                                            Tanggal Lahir <input type="date" name="tgl_lahir" required="required"> <br/>
+                                            Sudah pernah vaksinasi?<br>
+                                                Sudah<input type="radio" name="status_imunisasi" value="1">
+                                                Belum <input type="radio" name="status_imunisasi" value="0"> <br>
+                                            Masih diberikan ASI?<br/>
+                                                Masih<input type="radio" name="asi" value="1">
+                                                Tidak <input type="radio" name="asi" value="0"> <br>
+                                            <input type="submit" value="Simpan Data">
+                                        </form>
                                     </div>
                                 </div>
                             </div>

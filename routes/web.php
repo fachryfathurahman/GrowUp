@@ -17,4 +17,5 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('home','App\Http\Controllers\RegisterController@index');
+Route::get('home','App\Http\Controllers\RegisterController@show');
+Route::post('home','App\Http\Controllers\RegisterController@save');
