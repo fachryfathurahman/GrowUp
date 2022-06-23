@@ -565,23 +565,52 @@
                                 <!-- Card Content - Collapse -->
                                 <div class="collapse hide" id="collapseCardExample">
                                     <div class="card-body">
-                                        <form action="/home" method="post">
+                                        <form class="user" action="/home" method="post">
+                                        
                                             {{ csrf_field() }}
-                                            Nama <input type="text" name="nama" required="required"> <br/>
-                                            Umur <input type="number" name="umur" required="required"> <br/>
-                                            Panjang <input type="number" name="panjang" required="required"> <br/>
-                                            Berat <input type="number" name="berat" required="required"> <br/>
-                                            Jenis Kelamin<br/>
-                                                Laki-laki<input type="radio" name="jenis_kelamin" value="Laki-laki">
-                                                Perempuan<input type="radio" name="jenis_kelamin" value="Perempuan"> <br>
-                                            Tanggal Lahir <input type="date" name="tgl_lahir" required="required"> <br/>
-                                            Sudah pernah vaksinasi?<br>
-                                                Sudah<input type="radio" name="status_imunisasi" value="1">
-                                                Belum <input type="radio" name="status_imunisasi" value="0"> <br>
-                                            Masih diberikan ASI?<br/>
-                                                Masih<input type="radio" name="asi" value="1">
-                                                Tidak <input type="radio" name="asi" value="0"> <br>
-                                            <input type="submit" value="Simpan Data">
+                                                <div class="form-group row">
+                                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                                    Nama <input type="text" class="form-control form-control-user" name="nama" required="required"> 
+                                                        
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                    Umur <input type="number" class="form-control form-control-user" name="umur" required="required"> 
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                                    Panjang <input type="number" class="form-control form-control-user" name="panjang" required="required"> <br/> 
+                                                        
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                    Berat <input type="number" class="form-control form-control-user" name="berat" required="required"> <br/>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                                        Jenis Kelamin<br/>
+                                                        <input type="radio" name="jenis_kelamin" value="Laki-laki"> Laki-laki<br>
+                                                        <input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        Tanggal Lahir <input type="date" name="tgl_lahir" required="required"> <br/>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                                        Sudah pernah vaksinasi?<br>
+                                                        <input type="radio" name="status_imunisasi" value="1"> Sudah <br>
+                                                        <input type="radio" name="status_imunisasi" value="0"> Belum
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        Masih diberikan ASI?<br/>
+                                                        <input type="radio" name="asi" value="1"> Masih<br>
+                                                        <input type="radio" name="asi" value="0"> Tidak
+                                                    </div>
+                                                </div>
+                                            <input type="submit" class="btn btn-primary btn-user btn-block" value="Simpan Data">
                                         </form>
                                     </div>
                                 </div>
