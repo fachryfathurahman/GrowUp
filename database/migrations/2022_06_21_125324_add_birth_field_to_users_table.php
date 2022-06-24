@@ -14,8 +14,6 @@ class AddBirthFieldToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('id');
-            $table->bigIncrements('id');
             $table->enum('gender', ['male', 'female']);
             $table->date('date_of_birth');
             $table->string('city');

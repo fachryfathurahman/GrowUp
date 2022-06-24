@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateChildsTable extends Migration
+class CreateParentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateChildsTable extends Migration
      */
     public function up()
     {
-        Schema::create('child', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('parent', function (Blueprint $table) {
+            $table->BigIncrements('id');
             $table->char('name',30);
             $table->integer('age');
-            $table->enum('gender', ['Laki-laki', 'Perempuan']);
-            $table->date('birthday');
-            $table->boolean('asi');
+            $table->integer('phone');
+            $table->char('email');
+            $table->timestamps();
         });
     }
 
@@ -30,6 +30,6 @@ class CreateChildsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('child');
+        Schema::dropIfExists('parent');
     }
 }
