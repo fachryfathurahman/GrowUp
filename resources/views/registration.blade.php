@@ -16,16 +16,16 @@
 	<form action="/registration/add" method="post">
 		{{ csrf_field() }}
         <h2>Data Ayah<h2>
-		Nama <input type="text" name="namaAyah" required="required"> <br/>
-		Umur <input type="number" name="umurAyah" required="required"> <br/>
-		No. Telpon <input type="text" name="telpAyah" required="required"> <br/>
-		Email <input type="text" name="emailAyah" required="required"></textarea> <br/>
+		Nama <input type="text" name="name" required="required"> <br/>
+		Umur <input type="number" name="age" required="required"> <br/>
+		No. Telpon <input type="text" name="phone" required="required"> <br/>
+		Email <input type="text" name="email" required="required"></textarea> <br/>
         <br>
         <h2>Data Ibu<h2>
-        Nama <input type="text" name="namaIbu" required="required"> <br/>
-		Umur <input type="number" name="umurIbu" required="required"> <br/>
-		No. Telpon <input type="text" name="telpIbu" required="required"> <br/>
-		Email <input type="text" name="emailIbu" required="required"></textarea> <br/>
+        Nama <input type="text" name="name" required="required"> <br/>
+		Umur <input type="number" name="age" required="required"> <br/>
+		No. Telpon <input type="text" name="phone" required="required"> <br/>
+		Email <input type="text" name="email" required="required"></textarea> <br/>
 		<input type="submit" value="Daftar">
 	</form>
  

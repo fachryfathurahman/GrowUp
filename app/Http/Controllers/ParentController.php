@@ -17,18 +17,6 @@ class ParentController extends Controller
 
         $data = $request->all();
         Parents::create($data);
-        // DB::table('parent')->insert([
-        //     'name'=>$request->namaAyah,
-        //     'age'=>$request->umurAyah,
-        //     'phone'=>$request->telpAyah,
-        //     'email'=>$request->emailAyah
-        // ]);
-        // DB::table('parent')->insert([
-        //     'name'=>$request->namaIbu,
-        //     'age'=>$request->umurIbu,
-        //     'phone'=>$request->telpIbu,
-        //     'email'=>$request->emailIbu
-        // ]);
         return redirect('/');
     }
 }

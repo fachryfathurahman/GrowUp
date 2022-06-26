@@ -24,7 +24,7 @@ class ParentRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            //'name'=>'requred'
         ];
     }
 }
