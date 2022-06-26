@@ -19,6 +19,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::group(['middleware' => 'auth'], function () {
+    // ini kalok mau pake auth dulu untuk akses ke halamannya
+});
+
 Route::get('/home','App\Http\Controllers\HomeController@index');
 Route::get('/registration','App\Http\Controllers\ParentController@registration');
 Route::post('/registration/add','App\Http\Controllers\ParentController@add');
