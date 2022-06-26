@@ -32,7 +32,33 @@
                     <input type="submit" value="Simpan Data">
                 </form>
                 </div>
-
+                <br>
+                <h1>Daftar Anak</h1>
+                <div>
+                <table border="1">
+                    <tr>
+                        <th>Nama</th>
+                        <th>Umur</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Tanggal Lahir</th>
+                        <th>Status Asi</th>
+                    </tr>
+                    @foreach($child as $c)
+                    <tr>
+                        <td>{{ $c->name }}</td>
+                        <td>{{ $c->age }}</td>
+                        <td>{{ $c->gender }}</td>
+                        <td>{{ $c->birthday }}</td>
+                        <td>{{ $c->asi }}</td>
+                        <td>
+                            <a href="/pegawai/edit/{{ $p->pegawai_id }}">Edit</a>
+                            |
+                            <a href="/pegawai/hapus/{{ $p->pegawai_id }}">Hapus</a>
+                        </td>
+                    </tr>
+                    @endforeach
+                </table>
+                </div>
             </div>
         </div>
     </div>

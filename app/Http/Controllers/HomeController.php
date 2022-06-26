@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $child = DB::table('child')->get();
+        return view('home',['child' => $child]);
     }
 }
