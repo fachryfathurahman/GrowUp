@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
+use App\Models\Childs;
 use Illuminate\Database\Seeder;
 
-class MedicalRecordSeeder extends Seeder
+class ChildSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +14,6 @@ class MedicalRecordSeeder extends Seeder
      */
     public function run()
     {
-        // User::factory(10)->create();
+        Childs::factory(10)->create();
     }
 }

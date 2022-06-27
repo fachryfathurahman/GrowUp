@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Childs extends Model
 {
+    use HasFactory;
 
     protected $fillable = [
         'name',
@@ -14,9 +15,15 @@ class Childs extends Model
         'gender',
         'birthday',
         'asi'
-    ]; 
+    ];
 
-    public function parents(){
+    public function parents()
+    {
         return $this->hasManyThrough('App\Parents', 'App\Keluarga');
+    }
+
+    public function MedicalRecord()
+    {
+        return $this->hasOne(MedicalRecord::class);
     }
 }

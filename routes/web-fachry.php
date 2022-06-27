@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MedicalRecordController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -15,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Auth::routes();
+Route::resource('medical-record', MedicalRecordController::class);

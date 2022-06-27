@@ -15,7 +15,7 @@ class MedicalRecordController extends Controller
      */
     public function index()
     {
-        //
+        return view('medicalRecord');
     }
 
     /**
