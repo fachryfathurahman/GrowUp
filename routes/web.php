@@ -14,9 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group(['middleware' => 'auth'], function () {
+    // ini kalok mau pake auth dulu untuk akses ke halamannya
+});
+
+Route::get('/home','App\Http\Controllers\HomeController@index');
+Route::get('/registration','App\Http\Controllers\ParentController@registration');
+Route::post('/registration/add','App\Http\Controllers\ParentController@add');
+Route::post('/home/add','App\Http\Controllers\ChildController@add');
