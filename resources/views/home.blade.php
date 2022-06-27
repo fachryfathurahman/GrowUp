@@ -48,9 +48,9 @@
                         <td>{{ $c->name }}</td>
                         <td>{{ $c->age }}</td>
                         <td>{{ $c->gender }}</td>
-                        <td>{{ $c->birthday }}</td>
-                        <td>{{ $c->asi }}</td>
-                       
+                        <td>{{ $c->birthday }}</td>                        
+                        <td>{{ $c->asi }}</td>    
+                        <a href="/child_edit/{{ $c->id }}">Edit</a>
                     </tr>
                     @endforeach
                 </table>
