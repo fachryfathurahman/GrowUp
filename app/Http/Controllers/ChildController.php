@@ -14,4 +14,14 @@ class ChildController extends Controller
         Childs::create($data);
         return redirect('/home');
     }
+    
+    public function edit($id){
+        $childs = Childs::find($id);
+        return view('child_edit', ['childs' => $childs]);
+    }
+
+    public function update($id, ChildRequest $request) {
+        Childs::find($id)->update($request->all());
+        return redirect('/home');
+    }
 }

@@ -27,3 +27,9 @@ Route::get('/home','App\Http\Controllers\HomeController@index');
 Route::get('/registration','App\Http\Controllers\ParentController@registration');
 Route::post('/registration/add','App\Http\Controllers\ParentController@add');
 Route::post('/home/add','App\Http\Controllers\ChildController@add');
+Route::get('/child_edit/{id}', 'App\Http\Controllers\ChildController@edit');
+Route::put('/child_edit/update/{id}', 'App\Http\Controllers\ChildController@update');
+
+
+
+
