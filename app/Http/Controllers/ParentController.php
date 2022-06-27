@@ -14,7 +14,6 @@ class ParentController extends Controller
     }
 
     public function add(ParentRequest $request){
-
         $data = $request->all();
         Parents::create($data);
         return redirect('/');

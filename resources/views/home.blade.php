@@ -20,14 +20,14 @@
                 <div>
                 <form action="/home/add" method="post">
                     {{ csrf_field() }}
-                    Nama <input type="text" name="nama" required="required"> <br/>
-                    Umur <input type="number" name="umur" required="required"> <br/>
+                    Nama <input type="text" name="name" required="required"> <br/>
+                    Umur <input type="number" name="age" required="required"> <br/>
                     Gender
                     <div>
-                    <input type="radio" name="jenis_kelamin" value="Laki-laki">
-                    <input type="radio" name="jenis_kelamin" value="Perempuan">
+                    <input type="radio" name="gender" value="Laki-laki">
+                    <input type="radio" name="gender" value="Perempuan">
                     </div>
-                    Tanggal Lahir<input type="date" name="tgl_lahir">
+                    Tanggal Lahir<input type="date" name="birthday">
                     Asi <input type="checkbox" name="asi" value="1">
                     <input type="submit" value="Simpan Data">
                 </form>
@@ -43,18 +43,14 @@
                         <th>Tanggal Lahir</th>
                         <th>Status Asi</th>
                     </tr>
-                    @foreach($child as $c)
+                    @foreach($childs as $c)
                     <tr>
                         <td>{{ $c->name }}</td>
                         <td>{{ $c->age }}</td>
                         <td>{{ $c->gender }}</td>
                         <td>{{ $c->birthday }}</td>
                         <td>{{ $c->asi }}</td>
-                        <td>
-                            <a href="/pegawai/edit/{{ $p->pegawai_id }}">Edit</a>
-                            |
-                            <a href="/pegawai/hapus/{{ $p->pegawai_id }}">Hapus</a>
-                        </td>
+                       
                     </tr>
                     @endforeach
                 </table>

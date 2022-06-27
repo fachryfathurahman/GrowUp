@@ -13,13 +13,14 @@ class CreateChildsTable extends Migration
      */
     public function up()
     {
-        Schema::create('child', function (Blueprint $table) {
+        Schema::create('childs', function (Blueprint $table) {
             $table->increments('id');
             $table->char('name',30);
             $table->integer('age');
             $table->enum('gender', ['Laki-laki', 'Perempuan']);
             $table->date('birthday');
             $table->boolean('asi');
+            $table->timestamps();
         });
     }
 
@@ -30,6 +31,6 @@ class CreateChildsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('child');
+        Schema::dropIfExists('childs');
     }
 }

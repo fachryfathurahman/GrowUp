@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Child;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -14,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        // $this->middleware('auth');
+        // $this->middleware('aut   h');
     }
 
     /**
@@ -24,7 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $child = Child::all();
-        return view('home',['child' => $child]);
+        //$child = Child::all();
+        $childs = DB::table('childs')->get();
+        return view('home',['childs' => $childs]);
     }
 }
