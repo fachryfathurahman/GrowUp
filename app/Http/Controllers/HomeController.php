@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Childs;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -13,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('aut   h');
     }
 
     /**
@@ -23,6 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $childs = Childs::all();
+        $age= date('Y-m-d');
+        return view('home',['childs' => $childs,'age'=>$age]);
     }
 }

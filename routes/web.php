@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index']);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group(['middleware' => 'auth'], function () {
+    // ini kalok mau pake auth dulu untuk akses ke halamannya
+});
+
+Route::get('/home', 'App\Http\Controllers\HomeController@index');
+Route::get('/registration', 'App\Http\Controllers\ParentController@registration');
+Route::post('/registration/add', 'App\Http\Controllers\ParentController@add');
+Route::post('/home/add', 'App\Http\Controllers\ChildController@add');
+Route::get('/child_edit/{id}', 'App\Http\Controllers\ChildController@edit');
+Route::put('/child_edit/update/{id}', 'App\Http\Controllers\ChildController@update');
