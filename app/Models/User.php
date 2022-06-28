@@ -18,7 +18,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $guarded = [
-        'id'
+        'id',
     ];
 
     /**
@@ -39,4 +39,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function childs(){
+        return $this->hasMany(Childs::class);
+    }
+    public function parents(){
+        return $this->hasMany(Parents::class);
+    }
 }

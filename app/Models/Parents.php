@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Parents extends Model
 {
+    use HasFactory;
     protected $fillable = [
         'name',
         'age',
@@ -14,8 +15,8 @@ class Parents extends Model
         'email'
     ]; 
 
-    public function child(){
-        return $this->hasManyThrough('App\Child', 'App\Keluarga');
+    public function family(){
+        return $this->belongsTo(User::class);
     }
 
 }

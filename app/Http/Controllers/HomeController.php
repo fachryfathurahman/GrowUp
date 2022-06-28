@@ -26,7 +26,12 @@ class HomeController extends Controller
     public function index()
     {
         $childs = Childs::all();
-        $age= date('Y-m-d');
-        return view('home',['childs' => $childs,'age'=>$age]);
+        foreach($childs as $child){
+            $birthday=$child['birthday'];
+            date_diff(date_create(date('Y-m-d')),date_create($birthday));
+            //return $birthday;
+        }
+        
+        return view('home',['childs' => $childs]);
     }
 }

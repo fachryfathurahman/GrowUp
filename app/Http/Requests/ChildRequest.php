@@ -24,7 +24,11 @@ class ChildRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required'
+            'name' => ['required', 'string', 'max:255'],
+            'age' => ['required','integer','max:1'],
+            'gender'=> ['required'],
+            'birthday' => ['required'],
+            'asi' => ['required']
         ];
     }
 }

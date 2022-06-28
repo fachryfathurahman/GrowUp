@@ -17,13 +17,12 @@ class Childs extends Model
         'asi'
     ];
 
-    public function parents()
-    {
-        return $this->hasManyThrough('App\Parents', 'App\Keluarga');
+    public function parents(){
+        return $this->belongsTo(User::class);
     }
 
-    public function MedicalRecord()
-    {
-        return $this->hasOne(MedicalRecord::class);
+    public function childs(){
+        return $this->HasOne(Growth::class);
     }
+
 }
