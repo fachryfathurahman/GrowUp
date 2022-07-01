@@ -13,10 +13,9 @@ class CreateParentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('parents', function (Blueprint $table) {
-            $table->id();
-            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
-            $table->char('name');
+        Schema::create('parent', function (Blueprint $table) {
+            $table->BigIncrements('id');
+            $table->char('name',30);
             $table->integer('age');
             $table->integer('phone');
             $table->char('email');
@@ -31,6 +30,6 @@ class CreateParentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('parents');
+        Schema::dropIfExists('parent');
     }
 }

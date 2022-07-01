@@ -41,7 +41,6 @@
                         <th>Umur</th>
                         <th>Jenis Kelamin</th>
                         <th>Tanggal Lahir</th>
-                        <th>Umur</th>
                         <th>Status Asi</th>
                     </tr>
                     @foreach($childs as $c)

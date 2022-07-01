@@ -8,13 +8,4 @@ use Illuminate\Database\Eloquent\Model;
 class Growth extends Model
 {
     use HasFactory;
-
-    protected $guarded=[
-        'id'
-    ];
-
-    public function childs(){
-        return $this->belongsTo(Childs::class);
-    }
-
 }
