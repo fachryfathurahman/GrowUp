@@ -11,10 +11,11 @@ class TypeOfImmunizationController extends Controller
 {
     public function index()
     {
-        return view('immunization', [
-            // "child" => Child::all(),
-            "typeofimmunization" => TypeOfImmunization::all(),
-            "immunization" => Immunization::all(),
+        $typeofimmunization = TypeOfImmunization::all();
+        $immunization = Immunization::all();
+        return view('pages.immunization', [
+            'typeofimmunization' => $typeofimmunization,
+            'immunization' => $immunization
         ]);
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\MedicalRecordRequest;
 use App\Models\MedicalRecord;
 use App\Http\Requests\StoreMedicalRecordRequest;
 use App\Http\Requests\UpdateMedicalRecordRequest;
@@ -15,7 +16,7 @@ class MedicalRecordController extends Controller
      */
     public function index()
     {
-        return view('medicalRecord');
+        return view('pages.medicalrecord');
     }
 
     /**
@@ -34,7 +35,7 @@ class MedicalRecordController extends Controller
      * @param  \App\Http\Requests\StoreMedicalRecordRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreMedicalRecordRequest $request)
+    public function store(MedicalRecordRequest $request)
     {
         //
     }
@@ -45,7 +46,7 @@ class MedicalRecordController extends Controller
      * @param  \App\Models\MedicalRecord  $medicalRecord
      * @return \Illuminate\Http\Response
      */
-    public function show(MedicalRecord $medicalRecord)
+    public function show($id)
     {
         //
     }
@@ -56,7 +57,7 @@ class MedicalRecordController extends Controller
      * @param  \App\Models\MedicalRecord  $medicalRecord
      * @return \Illuminate\Http\Response
      */
-    public function edit(MedicalRecord $medicalRecord)
+    public function edit($id)
     {
         //
     }
@@ -68,7 +69,7 @@ class MedicalRecordController extends Controller
      * @param  \App\Models\MedicalRecord  $medicalRecord
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateMedicalRecordRequest $request, MedicalRecord $medicalRecord)
+    public function update(MedicalRecordRequest $request)
     {
         //
     }
@@ -79,7 +80,7 @@ class MedicalRecordController extends Controller
      * @param  \App\Models\MedicalRecord  $medicalRecord
      * @return \Illuminate\Http\Response
      */
-    public function destroy(MedicalRecord $medicalRecord)
+    public function destroy($id)
     {
         //
     }

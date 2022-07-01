@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Child;
+use App\Models\Children;
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $childs = Child::all();
+        $childs = Children::all();
         $age = date('Y-m-d');
         return view('home', ['childs' => $childs, 'age' => $age]);
     }

@@ -13,7 +13,7 @@ class ParentController extends Controller
         return view('registration');
     }
 
-    public function add(ParentRequest $request){
+    public function store(ParentRequest $request){
         $data = $request->all();
         Parents::create($data);
         return redirect('/');
