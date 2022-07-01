@@ -19,8 +19,8 @@ class CreateParentsTable extends Migration
             $table->integer('age');
             $table->integer('phone');
             $table->char('email');
-            $table->unsignedBigInteger('id_user');
-            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

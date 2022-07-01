@@ -20,6 +20,8 @@ class CreateChildrenTable extends Migration
             $table->enum('gender', ['Laki-laki', 'Perempuan']);
             $table->date('birthday');
             $table->boolean('asi');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

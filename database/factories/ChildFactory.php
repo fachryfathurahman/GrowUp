@@ -20,6 +20,7 @@ class ChildFactory extends Factory
             'gender' => $gender[rand(0, 1)],
             'birthday' => $this->faker->dateTimeThisYear(),
             'asi' => mt_rand(0, 1),
+            'user_id' => mt_rand(1, 5),
         ];
     }
 }

@@ -13,7 +13,8 @@ class Child extends Model
         'age',
         'gender',
         'birthday',
-        'asi'
+        'asi',
+        'user_id'
     ];
 
     public function parent()
