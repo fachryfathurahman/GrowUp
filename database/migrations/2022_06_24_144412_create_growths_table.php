@@ -28,7 +28,6 @@ class CreateGrowthsTable extends Migration
             $table->integer('fortyeighth_month_weight');
             $table->integer('fiftyfourth_month_weight');
             $table->integer('sixtieth_month_weight');
-
             $table->integer('first_month_length');
             $table->integer('sixth_month_length');
             $table->integer('twelfth_month_length');

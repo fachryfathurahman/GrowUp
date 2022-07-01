@@ -13,13 +13,13 @@ class CreateChildrenTable extends Migration
      */
     public function up()
     {
-        Schema::create('children', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('childrens', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->char('name', 30);
             $table->integer('age');
-            $table->enum('gender', ['Laki-laki', 'Perempuan']);
+            $table->enum('gender', ['male', 'female']);
             $table->date('birthday');
-            $table->boolean('asi');
+            $table->boolean('breast_milk');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
