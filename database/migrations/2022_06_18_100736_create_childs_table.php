@@ -14,8 +14,9 @@ class CreateChildsTable extends Migration
     public function up()
     {
         Schema::create('childs', function (Blueprint $table) {
-            $table->increments('id');
-            $table->char('name',30);
+            $table->id();
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
+            $table->char('name');
             $table->integer('age');
             $table->enum('gender', ['Laki-laki', 'Perempuan']);
             $table->date('birthday');
