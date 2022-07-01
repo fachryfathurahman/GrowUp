@@ -24,12 +24,12 @@ class Children extends Model
 
     public function medical_record()
     {
-        return $this->hasOne(MedicalRecord::class);
+        return $this->hasOne(MedicalRecord::class, 'child_id', 'id');
     }
 
     public function immunization()
     {
-        return $this->hasMany(Immunization::class);
+        return $this->hasMany(Immunization::class, 'toi_id', 'id');
     }
 
     public function user()

@@ -17,7 +17,7 @@ class Immunization extends Model
         return $this->belongsTo(Child::class);
     }
 
-    public function typeofimmunization()
+    public function type_of_immunization()
     {
         return $this->belongsTo(TypeOfImmunization::class, 'toi_id', 'id');
     }
