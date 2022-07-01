@@ -14,7 +14,9 @@ class CreateGrowthsTable extends Migration
     public function up()
     {
         Schema::create('growths', function (Blueprint $table) {
-            $table->integer('child_id');
+            $table->id();
+            $table->unsignedInteger('child_id');
+            $table->foreign('child_id')->references('id')->on('children')->onDelete('cascade');
             $table->integer('first_month_weight');
             $table->integer('sixth_month_weight');
             $table->integer('twelfth_month_weight');
@@ -35,9 +37,11 @@ class CreateGrowthsTable extends Migration
             $table->integer('thirtieth_length');
             $table->integer('thirtysixth_month_length');
             $table->integer('fortysecond_month_length');
-            $table->integer('fortyeighth_month_length');
+            $table->integer('fortyeight_month_length');
             $table->integer('fiftyfourth_month_length');
             $table->integer('sixtieth_month_length');
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

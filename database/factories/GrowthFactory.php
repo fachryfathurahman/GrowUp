@@ -23,6 +23,7 @@ class GrowthFactory extends Factory
             'thirtieth_weight' => $this->faker->randomFloat(1, 13, 14),
             'thirtysixth_month_weight' => $this->faker->randomFloat(1, 13, 14),
             'fortysecond_month_weight' => $this->faker->randomFloat(1, 15, 16),
+            'fortyeighth_month_weight' => $this->faker->randomFloat(1, 15, 16),
             'fiftyfourth_month_weight' => $this->faker->randomFloat(1, 16, 17),
             'sixtieth_month_weight' => $this->faker->randomFloat(1, 17, 18),
 
@@ -34,6 +35,7 @@ class GrowthFactory extends Factory
             'thirtieth_length' => $this->faker->randomFloat(1, 70, 75),
             'thirtysixth_month_length' => $this->faker->randomFloat(1, 75, 80),
             'fortysecond_month_length' => $this->faker->randomFloat(1, 85, 90),
+            'fortyeight_month_length' => $this->faker->randomFloat(1, 85, 90),
             'fiftyfourth_month_length' => $this->faker->randomFloat(1, 90, 95),
             'sixtieth_month_length' => $this->faker->randomFloat(1, 95, 100),
         ];
