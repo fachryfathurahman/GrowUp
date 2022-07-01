@@ -28,3 +28,8 @@ Route::post('/registration/add', 'App\Http\Controllers\ParentController@add');
 Route::post('/home/add', 'App\Http\Controllers\ChildController@add');
 Route::get('/child_edit/{id}', 'App\Http\Controllers\ChildController@edit');
 Route::put('/child_edit/update/{id}', 'App\Http\Controllers\ChildController@update');
+
+Route::get('/immunization', 'App\Http\Controllers\TypeOfImmunizationController@index', 'App\Http\Controllers\ImmunizationController@index');
+Route::get('/immunization2', 'App\Http\Controllers\ImmunizationController@index');
+
+Route::post('immunization/store', 'App\Http\Controllers\ImmunizationController@store');
