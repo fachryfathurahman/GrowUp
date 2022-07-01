@@ -15,10 +15,12 @@ class CreateParentsTable extends Migration
     {
         Schema::create('parent', function (Blueprint $table) {
             $table->BigIncrements('id');
-            $table->char('name',30);
+            $table->char('name', 30);
             $table->integer('age');
             $table->integer('phone');
             $table->char('email');
+            $table->unsignedBigInteger('id_user');
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

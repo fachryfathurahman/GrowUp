@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Childs;
+use App\Models\Child;
 use Illuminate\Database\Seeder;
 
 class ChildSeeder extends Seeder
@@ -14,6 +14,6 @@ class ChildSeeder extends Seeder
      */
     public function run()
     {
-        Childs::factory(10)->create();
+        Child::factory(10)->create();
     }
 }
