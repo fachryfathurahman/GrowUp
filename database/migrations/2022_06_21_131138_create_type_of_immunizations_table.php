@@ -16,7 +16,7 @@ class CreateTypeOfImmunizationsTable extends Migration
         Schema::create('type_of_immunizations', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('immunization_name');
-            $table->date('immunization_date');
+            $table->integer('age');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -9,18 +9,21 @@ use Illuminate\Support\Facades\DB;
 
 class ChildController extends Controller
 {
-    public function add(ChildRequest $request){
+    public function add(ChildRequest $request)
+    {
         $data = $request->all();
         Childs::create($data);
         return redirect('/home');
     }
-    
-    public function edit($id){
+
+    public function edit($id)
+    {
         $childs = Childs::find($id);
         return view('child_edit', ['childs' => $childs]);
     }
 
-    public function update($id, ChildRequest $request) {
+    public function update($id, ChildRequest $request)
+    {
         Childs::find($id)->update($request->all());
         return redirect('/home');
     }
