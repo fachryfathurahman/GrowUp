@@ -14,8 +14,10 @@ class CreateImmunizationsTable extends Migration
     public function up()
     {
         Schema::create('immunizations', function (Blueprint $table) {
-            $table->integer('child_id');
-            $table->integer('toi_id');
+            $table->unsignedInteger('child_id');
+            $table->unsignedBigInteger('toi_id');
+            $table->foreign('child_id')->references('id')->on('children')->onDelete('cascade');
+            $table->foreign('toi_id')->references('id')->on('type_of_immunizations')->onDelete('cascade');
         });
     }
 
