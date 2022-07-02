@@ -17,6 +17,8 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             ChildSeeder::class,
             MedicalRecordSeeder::class,
+            GrowthSeeder::class,
+            ParentsSeeder::class
         ]);
     }
 }

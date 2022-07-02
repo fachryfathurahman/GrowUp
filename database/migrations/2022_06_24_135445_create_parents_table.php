@@ -13,12 +13,14 @@ class CreateParentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('parent', function (Blueprint $table) {
+        Schema::create('parents', function (Blueprint $table) {
             $table->BigIncrements('id');
-            $table->char('name',30);
+            $table->char('name', 30);
             $table->integer('age');
             $table->integer('phone');
             $table->char('email');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
