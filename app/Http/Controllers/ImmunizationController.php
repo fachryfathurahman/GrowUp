@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Children;
+use App\Models\Child;
 use App\Models\Immunization;
 use Illuminate\Http\Request;
 
@@ -10,7 +10,7 @@ class ImmunizationController extends Controller
 {
     public function index()
     {
-        $child = Children::all();
+        $child = Child::all();
         $immunization = Immunization::all();
         return view('immunization2', [
             "child" => $child,

@@ -18,7 +18,7 @@ class CreateMedicalRecordsTable extends Migration
             $table->json('indication');
             $table->timestamp('date_record');
             $table->integer('temperature');
-            $table->unsignedInteger('child_id');
+            $table->unsignedBigInteger('child_id');
             $table->foreign('child_id')->references('id')->on('children')->onDelete('cascade');
             $table->string('note');
             $table->text('attachment');

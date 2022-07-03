@@ -38,4 +38,3 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::get('/registration', 'App\Http\Controllers\ParentController@registration');
 Route::post('/registration/add', 'App\Http\Controllers\ParentController@add');
-

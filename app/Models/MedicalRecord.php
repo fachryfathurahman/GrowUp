@@ -12,6 +12,6 @@ class MedicalRecord extends Model
 
     public function child()
     {
-        return $this->belongsTo(Children::class, 'child_id', 'id');
+        return $this->belongsTo(Child::class, 'child_id', 'id');
     }
 }

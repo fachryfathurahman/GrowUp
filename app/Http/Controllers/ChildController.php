@@ -2,29 +2,29 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ChildrenRequest;
-use App\Models\Children;
+use App\Http\Requests\ChildRequest;
+use App\Models\Child;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class ChildrenController extends Controller
+class ChildController extends Controller
 {
-    public function store(ChildrenRequest $request)
+    public function store(ChildRequest $request)
     {
         $data = $request->all();
-        Children::create($data);
+        Child::create($data);
         return redirect()->route('pages.home');
     }
 
     public function edit($id)
     {
-        $childs = Children::find($id);
+        $childs = Child::find($id);
         return view('pages.child_edit', ['childs' => $childs]);
     }
 
-    public function update($id, ChildrenRequest $request)
+    public function update($id, ChildRequest $request)
     {
-        Children::find($id)->update($request->all());
+        Child::find($id)->update($request->all());
         return redirect()->route('pages.home');
     }
 }

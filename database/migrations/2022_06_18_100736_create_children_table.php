@@ -13,7 +13,7 @@ class CreateChildrenTable extends Migration
      */
     public function up()
     {
-        Schema::create('childrens', function (Blueprint $table) {
+        Schema::create('children', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->char('name', 30);
             $table->integer('age');

@@ -13,13 +13,13 @@ class ChildFactory extends Factory
      */
     public function definition()
     {
-        $gender = ["Laki-laki", "Perempuan"];
+        $gender = ["male", "female"];
         return [
             'name' => $this->faker->name(),
             'age' => mt_rand(1, 5),
             'gender' => $gender[rand(0, 1)],
             'birthday' => $this->faker->dateTimeThisYear(),
-            'asi' => mt_rand(0, 1),
+            'breast_milk' => mt_rand(0, 1),
             'user_id' => mt_rand(1, 5),
         ];
     }

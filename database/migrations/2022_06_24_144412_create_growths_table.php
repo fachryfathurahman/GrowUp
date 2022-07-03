@@ -15,7 +15,7 @@ class CreateGrowthsTable extends Migration
     {
         Schema::create('growths', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedInteger('child_id');
+            $table->unsignedBigInteger('child_id');
             $table->foreign('child_id')->references('id')->on('children')->onDelete('cascade');
             $table->date('growth_date');
             $table->integer('age');
