@@ -37,7 +37,7 @@
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Stunting :</h6>
-            <a class="collapse-item" href="buttons.html">Data Stunting</a>
+            <a class="collapse-item" href="/definition">Data Stunting</a>
             <a class="collapse-item" href="cards.html">Stunting di Indonesia</a>
         </div>
     </div>
@@ -45,7 +45,7 @@
 
 <!-- Nav Item - Dampak Stunting -->
 <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+    <a class="nav-link collapsed" href="/impact" data-toggle="collapse" data-target="#collapseUtilities"
         aria-expanded="true" aria-controls="collapseUtilities">
         <i class="fas fa-fw fa-wrench"></i>
         <span>Dampak Buruk Stunting</span>

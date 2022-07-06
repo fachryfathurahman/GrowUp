@@ -12,4 +12,10 @@ class SocializationController extends Controller
     public function cause(){
         return view('layouts.cause');
     }
+    public function definition(){
+        return view('layouts.definition');
+    }
+    public function impact(){
+        return view('layouts.impact');
+    }
 }

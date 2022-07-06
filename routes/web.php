@@ -38,5 +38,8 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::get('/registration', 'App\Http\Controllers\ParentController@registration');
 Route::post('/registration/add', 'App\Http\Controllers\ParentController@add');
+
 route::get('/prevention', 'App\Http\Controllers\SocializationController@prevention');
 route::get('/cause', 'App\Http\Controllers\SocializationController@cause');
+route::get('/definition', 'App\Http\Controllers\SocializationController@definition');
+route::get('/impact', 'App\Http\Controllers\SocializationController@impact');
