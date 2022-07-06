@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Child;
 use Illuminate\Support\Facades\DB;
+use DateTime;
 
 class HomeController extends Controller
 {
@@ -25,8 +26,14 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $ages=array();
         $childs = Child::all();
-        $age = date('Y-m-d');
-        return view('layouts.dashboard', ['childs' => $childs, 'age' => $age]);
+        foreach($childs as $child){
+            $birthday  = new DateTime($child['birthday']);
+            $currenttime = new DateTime();
+            $age = $currenttime->diff($birthday)->format("%a")/30;
+            array_push($ages,(int)$age);
+        }
+        return view('layouts.dashboard', ['childs' => $childs,'ages'=>$ages,]);
     }
 }

@@ -19,8 +19,8 @@ class CreateChildrenTable extends Migration
             $table->integer('age');
             $table->enum('gender', ['male', 'female']);
             $table->date('birthday');
-            $table->boolean('breast_milk');
-            $table->unsignedBigInteger('user_id');
+            $table->enum('breast_milk', ['yes', 'no']);
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
