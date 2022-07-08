@@ -13,7 +13,7 @@ class ChildController extends Controller
     {
         $data = $request->all();
         Child::create($data);
-        return redirect()->route('layouts.dashboard');
+        return redirect('/');
     }
 
     public function edit($id)
@@ -25,6 +25,6 @@ class ChildController extends Controller
     public function update($id, ChildRequest $request)
     {
         Child::find($id)->update($request->all());
-        return redirect()->route('layouts.dashboard');
+        return redirect('/');
     }
 }

@@ -158,7 +158,7 @@
                                         <canvas id="myPieChart"></canvas>
                                     </div>
                                     <div class="mt-4 text-center small">
-                                            <p>umur anak anda {{$ages[$index]}}</p>
+                                            <p>Anak anda berumur {{$ages[$index]}} Bulan</p>
                                             <?php 
                                             switch($ages[$index]){
                                                 case 12: echo "<p>jangan lupa memberikan asi ke anak anda</p>";
@@ -177,7 +177,7 @@
                                             <i class="fas fa-circle text-info"></i> Referral
                                         </span>
                                     </div>
-                                    <a href="#" class="btn btn-primary btn-icon-split">
+                                    <a href="/child/edit/{{$childs[$index]->id}}" class="btn btn-primary btn-icon-split">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-child"></i>
                                         </span>

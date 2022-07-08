@@ -11,12 +11,12 @@
                     <strong>EDIT DATA</strong>
                 </div>
                 <div class="card-body">
-                    <a href="/home" class="btn btn-primary">Kembali</a>
+                    <a href="/" class="btn btn-primary">Kembali</a>
                     <br/>
                     <br/>
                     
  
-                    <form method="post" action="/child_edit/update/{{ $childs->id }}">
+                    <form method="post" action="/child/update/{{ $childs->id }}">
  
                         {{ csrf_field() }}
                         {{ method_field('PUT') }}
@@ -25,12 +25,16 @@
                         Nama <input type="text" name="name" required="required" value="{{ $childs->name }}"> <br/>
                         Umur <input type="number" name="age" required="required" value="{{ $childs->age }}"> <br/>
                         Gender
-                        <div>
-                        <input type="radio" name="gender" value="Laki-laki">
-                        <input type="radio" name="gender" value="Perempuan">
-                        </div>
+                            <div>
+                            Laki-Laki<input type="radio" name="gender" value="male">
+                            Perempuan<input type="radio" name="gender" value="female">
+                            </div>
                         Tanggal Lahir<input type="date" name="birthday" value="{{ $childs->date }}"><br>
-                        Asi <input type="checkbox" name="asi" value="{{ $childs->asi }}">
+                        Asi
+                            <div> 
+                            Masih<input type="radio" name="breast_milk" value="yes">
+                            Tidak<input type="radio" name="breast_milk" value="no">
+                            </div>
                         <div class="form-group">
                             <input type="submit" class="btn btn-success" value="Simpan">
                         </div>
