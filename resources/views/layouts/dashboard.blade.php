@@ -142,8 +142,9 @@
                     <!-- Content Row -->
 
                     <div class="row">
-                        <!-- Pie Chart -->
-                        @for ($index = 0 ; $index < count($childs); $index++) {
+                       
+                        @for ($index = 0 ; $index < count($childs); $index++)
+                         <!-- Pie Chart -->
                         <div class="col-xl-4 col-lg-5">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
@@ -176,6 +177,12 @@
                                             <i class="fas fa-circle text-info"></i> Referral
                                         </span>
                                     </div>
+                                    <a href="#" class="btn btn-primary btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-child"></i>
+                                        </span>
+                                        <span class="text">Update Data Anak</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -208,6 +215,12 @@
                                     <div class="chart-area">
                                         <canvas id="myAreaChart"></canvas>
                                     </div>
+                                    <a href="#" class="btn btn-primary btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-heartbeat"></i>
+                                        </span>
+                                        <span class="text">Update Perkembangan anak</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
