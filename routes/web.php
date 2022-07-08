@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\ChildController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ImmunizationController;
+use App\Http\Controllers\TypeOfImmunizationController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,17 +32,25 @@ Route::group(['middleware' => 'auth'], function () {
 
     // Route::post('immunization/store', 'App\Http\Controllers\ImmunizationController@store');
 
-    route::resource('home', 'HomeController');
-    route::resource('child', 'ChildController');
-    route::resource('immunization', 'ImmunizationController');
-    route::resource('type_of_immunization', 'TypeOfImmunizationController');
+    route::resource('home', HomeController::class);
+    route::resource('child', ChildController::class);
+    route::resource('immunization', ImmunizationController::class);
+    route::resource('type_of_immunization', TypeOfImmunizationController::class);
     // Route::post('/home/add', 'App\Http\Controllers\ChildController@add');
     // Route::get('/home', 'App\Http\Controllers\HomeController@index');
 });
 
 Route::get('/registration', 'App\Http\Controllers\ParentController@registration');
 Route::post('/registration/add', 'App\Http\Controllers\ParentController@add');
-Route::post('/add', 'App\Http\Controllers\ChildController@add');
+Route::get('/registration', 'App\Http\Controllers\ParentController@registration');
+
+Route::post('/child/add', 'App\Http\Controllers\ChildController@add');
+Route::get('/child/edit/{id}', 'App\Http\Controllers\ChildController@edit');
+Route::put('/child/update/{id}', 'App\Http\Controllers\ChildController@update');
+
+Route::get('/child/growth/{child_id}', 'App\Http\Controllers\GrowthController@update');
+Route::put('/child/growth/store/{child_id}', 'App\Http\Controllers\GrowthController@store');
+
 
 route::get('/prevention', 'App\Http\Controllers\SocializationController@prevention');
 route::get('/cause', 'App\Http\Controllers\SocializationController@cause');

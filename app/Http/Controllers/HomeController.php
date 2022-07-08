@@ -26,14 +26,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $ages=array();
+        $ages = array();
         $childs = Child::all();
-        foreach($childs as $child){
+        foreach ($childs as $child) {
             $birthday  = new DateTime($child['birthday']);
             $currenttime = new DateTime();
-            $age = $currenttime->diff($birthday)->format("%a")/30;
-            array_push($ages,(int)$age);
+            $age = $currenttime->diff($birthday)->format("%a") / 30;
+            array_push($ages, (int)$age);
         }
-        return view('layouts.dashboard', ['childs' => $childs,'ages'=>$ages,]);
+        return view('pages.child.index', ['childs' => $childs, 'ages' => $ages,]);
     }
 }

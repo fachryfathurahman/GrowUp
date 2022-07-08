@@ -9,22 +9,26 @@ use Illuminate\Support\Facades\DB;
 
 class ChildController extends Controller
 {
+    // public function index()
+    // {
+    //     return view('pages.child.index');
+    // }
     public function add(ChildRequest $request)
     {
         $data = $request->all();
         Child::create($data);
-        return redirect()->route('layouts.dashboard');
+        return redirect('/');
     }
 
     public function edit($id)
     {
         $childs = Child::find($id);
-        return view('pages.child_edit', ['childs' => $childs]);
+        return view('pages.child.edit', ['childs' => $childs]);
     }
 
     public function update($id, ChildRequest $request)
     {
         Child::find($id)->update($request->all());
-        return redirect()->route('layouts.dashboard');
+        return redirect('/');
     }
 }
