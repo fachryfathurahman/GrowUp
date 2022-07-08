@@ -215,7 +215,7 @@
                                     <div class="chart-area">
                                         <canvas id="myAreaChart"></canvas>
                                     </div>
-                                    <a href="#" class="btn btn-primary btn-icon-split">
+                                    <a href="/child/growth/{{$childs[$index]->id}}" class="btn btn-primary btn-icon-split">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-heartbeat"></i>
                                         </span>
@@ -244,12 +244,9 @@
                                 <!-- Card Content - Collapse -->
                                 <div class="collapse hide" id="collapseCardExample">
                                     <div class="card-body">
-                                        <form class="user" action="/add" method="post">
+                                        <form class="user" action="/child/add" method="post">
                                             {{ csrf_field() }}
                                                 <div class="form-group row">
-                                                <div class="col-sm-6 mb-3 mb-sm-0">
-                                                    
-                                                     
                                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                                     Nama <input type="text" class="form-control form-control-user" name="name" required="required"> 
                                                         
@@ -265,24 +262,22 @@
                                                     <div class="col-sm-6">
                                                         Tanggal Lahir <input type="date" name="birthday" required="required"> <br/>
                                                     </div>
-
-                                                    
                                                 </div>
 
                                                 <div class="form-group row">
                                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                                        Jenis Kelamin<br/>
+                                                        Apakah Masih Diberikan ASI?<br/>
                                                         <input type="radio" name="breast_milk" value="yes"> Masih<br>
                                                         <input type="radio" name="breast_milk" value="no"> Tidak
                                                     </div>
 
-                                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                                    <div class="col-sm-6">
                                                         Jenis Kelamin<br/>
                                                         <input type="radio" name="gender" value="male"> Laki-laki<br>
                                                         <input type="radio" name="gender" value="female"> Perempuan
                                                     </div>
-
                                                 </div>
+                                                
                                             <input type="submit" class="btn btn-primary btn-user btn-block" value="Simpan Data">
                                         </form>
                                     </div>

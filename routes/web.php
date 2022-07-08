@@ -40,8 +40,13 @@ Route::get('/registration', 'App\Http\Controllers\ParentController@registration'
 Route::post('/registration/add', 'App\Http\Controllers\ParentController@add');
 Route::get('/registration', 'App\Http\Controllers\ParentController@registration');
 
+Route::post('/child/add', 'App\Http\Controllers\ChildController@add');
 Route::get('/child/edit/{id}', 'App\Http\Controllers\ChildController@edit');
 Route::put('/child/update/{id}', 'App\Http\Controllers\ChildController@update');
+
+Route::get('/child/growth/{child_id}', 'App\Http\Controllers\GrowthController@update');
+Route::put('/child/growth/store/{child_id}', 'App\Http\Controllers\GrowthController@store');
+
 
 route::get('/prevention', 'App\Http\Controllers\SocializationController@prevention');
 route::get('/cause', 'App\Http\Controllers\SocializationController@cause');
