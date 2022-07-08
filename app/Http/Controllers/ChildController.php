@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\DB;
 
 class ChildController extends Controller
 {
+    // public function index()
+    // {
+    //     return view('pages.child.index');
+    // }
     public function add(ChildRequest $request)
     {
         $data = $request->all();
@@ -19,7 +23,7 @@ class ChildController extends Controller
     public function edit($id)
     {
         $childs = Child::find($id);
-        return view('pages.child_edit', ['childs' => $childs]);
+        return view('pages.child.edit', ['childs' => $childs]);
     }
 
     public function update($id, ChildRequest $request)
