@@ -8,37 +8,43 @@
                 <strong>EDIT DATA</strong>
             </div>
             <div class="card-body">
-                <a href="/" class="btn btn-primary">Kembali</a>
-                <br />
-                <br />
-
-
-                <form method="post" action="/child/update/{{ $childs->id }}">
-
+                <form class="user" action="/child/update/{{ $childs->id }}" method="post">
                     {{ csrf_field() }}
                     {{ method_field('PUT') }}
+                    <div class="form-group row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            Nama <input type="text" class="form-control form-control-user" name="name" value="{{ $childs->name }}"
+                                required="required">
 
+                        </div>
+                        <div class="col-sm-6">
+                            Umur <input type="number" class="form-control form-control-user" name="age" value="{{ $childs->age }}"
+                                required="required">
+                        </div>
+                    </div>
                     <div class="form-group">
-                        Nama <input type="text" name="name" required="required" value="{{ $childs->name }}"> <br />
-                        Umur <input type="number" name="age" required="required" value="{{ $childs->age }}"> <br />
-                        Gender
-                        <div>
-                            Laki-Laki<input type="radio" name="gender" value="male">
-                            Perempuan<input type="radio" name="gender" value="female">
+                        <div class="col-sm-6">
+                            Tanggal Lahir <input type="date" name="birthday" value="{{ $childs->birthday }}" required="required"> <br />
                         </div>
-                        Tanggal Lahir<input type="date" name="birthday" value="{{ $childs->date }}"><br>
-                        Asi
-                        <div>
-                            Masih<input type="radio" name="breast_milk" value="yes">
-                            Tidak<input type="radio" name="breast_milk" value="no">
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" class="btn btn-success" value="Simpan">
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            Apakah Masih Diberikan ASI?<br />
+                            <input type="radio" name="breast_milk" value="yes"> Masih<br>
+                            <input type="radio" name="breast_milk" value="no"> Tidak
                         </div>
 
+                        <div class="col-sm-6">
+                            Jenis Kelamin<br />
+                            <input type="radio" name="gender" value="male"> Laki-laki<br>
+                            <input type="radio" name="gender" value="female"> Perempuan
+                        </div>
+                    </div>  
+                    <div class="col-sm-6">
+                        <input type="submit" class="btn btn-success" value="Simpan">
+                        <a href="/" class="btn btn-primary">Kembali</a>
+                    </div>
                 </form>
-
             </div>
-        </div>
-    </div>
 @endsection
