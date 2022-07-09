@@ -171,7 +171,8 @@
                         <!-- Card Body -->
                         <div class="card-body">
                             <div class="chart-area">
-                                <canvas id="myAreaChart"></canvas>
+                                <!--<canvas id="myAreaChart"></canvas>-->
+                                <p>zScore anak anda sekarang adalah {{ $growths[$index]->zScore }}</p>
                             </div>
                             <a href="/child/growth/{{ $childs[$index]->id }}" class="btn btn-primary btn-icon-split">
                                 <span class="icon text-white-50">
