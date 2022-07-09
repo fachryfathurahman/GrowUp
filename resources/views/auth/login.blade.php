@@ -25,7 +25,7 @@
                                     <form method="POST" action="{{ route('login') }}">
                                         @csrf
                                         <div class="form-group">
-                                            <input type="email"
+                                            <input name="email" type="email"
                                                 class="form-control form-control-user @error('email') is-invalid @enderror"
                                                 id="email" required autocomplete="email" autofocus
                                                 aria-describedby="emailHelp" placeholder="Enter Email Address...">
@@ -36,7 +36,7 @@
                                             @enderror
                                         </div>
                                         <div class="form-group">
-                                            <input type="password"
+                                            <input name="password" type="password"
                                                 class="form-control form-control-user @error('password') is-invalid @enderror"
                                                 id="password" placeholder="Password">
                                             @error('password')
