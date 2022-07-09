@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateImmunizationsTable extends Migration
+class CreateChildImunsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateImmunizationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('immunizations', function (Blueprint $table) {
+        Schema::create('child_imuns', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->integer('usia');
+            $table->integer('id_anak');
+            $table->string('nama_imunisasi');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateImmunizationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('immunizations');
+        Schema::dropIfExists('child_imuns');
     }
 }

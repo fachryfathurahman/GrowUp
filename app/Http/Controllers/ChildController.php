@@ -9,10 +9,13 @@ use Illuminate\Support\Facades\DB;
 
 class ChildController extends Controller
 {
-    // public function index()
-    // {
-    //     return view('pages.child.index');
-    // }
+    public function index()
+    {
+        return view('/', [
+            "title" => "Child",
+            "id_anak" => Child::all()
+        ]);
+    }
     public function add(ChildRequest $request)
     {
         $data = $request->all();

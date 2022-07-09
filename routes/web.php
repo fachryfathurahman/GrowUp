@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ChildController;
+use App\Http\Controllers\ChildImunController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ImmunizationController;
 use App\Http\Controllers\TypeOfImmunizationController;
@@ -34,7 +35,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     route::resource('home', HomeController::class);
     route::resource('child', ChildController::class);
-    route::resource('immunization', ImmunizationController::class);
+    // route::resource('immunization', ImmunizationController::class);
     route::resource('type_of_immunization', TypeOfImmunizationController::class);
     // Route::post('/home/add', 'App\Http\Controllers\ChildController@add');
     // Route::get('/home', 'App\Http\Controllers\HomeController@index');
@@ -56,3 +57,10 @@ route::get('/prevention', 'App\Http\Controllers\SocializationController@preventi
 route::get('/cause', 'App\Http\Controllers\SocializationController@cause');
 route::get('/definition', 'App\Http\Controllers\SocializationController@definition');
 route::get('/impact', 'App\Http\Controllers\SocializationController@impact');
+
+
+Route::get('/immunization/{id}', [ImmunizationController::class, 'index']);
+Route::get('immunization/create', [ChildImunController::class, 'create']);
+Route::post('immunization/store', [ChildImunController::class, 'store']);
+
+Route::get('{id}/immunization/child', [ChildImunController::class, 'index']);

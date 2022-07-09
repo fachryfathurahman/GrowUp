@@ -173,11 +173,18 @@
                             <div class="chart-area">
                                 <canvas id="myAreaChart"></canvas>
                             </div>
-                            <a href="/child/growth/{{ $childs[$index]->id }}" class="btn btn-primary btn-icon-split">
+                            <a href="/child/growth/{{ $childs[$index]->id }}" class="btn btn-primary btn-icon-split mb-3">
                                 <span class="icon text-white-50">
                                     <i class="fas fa-heartbeat"></i>
                                 </span>
                                 <span class="text">Update Perkembangan anak</span>
+                            </a>
+
+                            <a href="/immunization/{{ $childs[$index]->id }}" class="btn btn-primary btn-icon-split mb-3">
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-heartbeat"></i>
+                                </span>
+                                <span class="text">Imunisasi</span>
                             </a>
                         </div>
                     </div>

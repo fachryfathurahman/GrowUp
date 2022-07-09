@@ -8,13 +8,12 @@ use Illuminate\Http\Request;
 
 class ImmunizationController extends Controller
 {
-    public function index()
+    public function index($id)
     {
-        $child = Child::all();
-        $immunization = Immunization::all();
-        return view('immunization2', [
-            "child" => $child,
-            "immunization" => $immunization,
+        return view('pages/immunization/imunisasi', [
+            "title" => "Imunisasi",
+            "imunisasi" => Immunization::all(),
+            "id" => Child::find($id)
         ]);
     }
 
