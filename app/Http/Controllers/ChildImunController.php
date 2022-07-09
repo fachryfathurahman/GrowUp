@@ -9,23 +9,24 @@ use Illuminate\Http\Request;
 
 class ChildImunController extends Controller
 {
-    public function index($id_anak)
+    public function index($id)
     {
+        $id_anak = Child::find($id);
         return view('pages\immunization\imunisasi2', [
             "title" => "Imunisasi",
             "imunchild" => ChildImun::all(),
-            "id_anak" => Child::find($id_anak)
+            "id_anak" => $id_anak
         ]);
     }
 
-    public function create()
+    public function create($id)
     {
-
+        $id_anak = Child::find($id);
         return view('pages/immunization/createimmunizationchild', [
             "title" => "Imunisasi",
-            "id_anak" => 2,
             "imunisasi" => ChildImun::all(),
-            "imunanak" => Immunization::all()
+            "imunanak" => Immunization::all(),
+            "id_anak" => $id_anak
 
         ]);
     }
@@ -33,7 +34,7 @@ class ChildImunController extends Controller
     public function store(Request $request)
     {
         ChildImun::create($request->except(['_token', 'submit']));
-        return redirect('immunization/child');
+        return redirect('/');
         // dd($request->all());
     }
 }

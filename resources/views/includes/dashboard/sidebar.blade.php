@@ -107,12 +107,7 @@
         <span>Charts</span></a>
 </li>
 
-<!-- Nav Item - Tables -->
-<li class="nav-item">
-    <a class="nav-link" href="immunization">
-        <i class="fas fa-fw fa-table"></i>
-        <span>Imunisasi</span></a>
-</li>
+
 
 <!-- Divider -->
 <hr class="sidebar-divider d-none d-md-block">

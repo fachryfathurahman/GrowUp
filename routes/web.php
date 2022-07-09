@@ -60,7 +60,7 @@ route::get('/impact', 'App\Http\Controllers\SocializationController@impact');
 
 
 Route::get('/immunization/{id}', [ImmunizationController::class, 'index']);
-Route::get('immunization/create', [ChildImunController::class, 'create']);
-Route::post('immunization/store', [ChildImunController::class, 'store']);
+Route::get('/immunization/create/{id}', [ChildImunController::class, 'create']);
+Route::post('/immunization/create/store', [ChildImunController::class, 'store']);
 
-Route::get('{id}/immunization/child', [ChildImunController::class, 'index']);
+Route::get('/immunization/child/{id}', [ChildImunController::class, 'index']);

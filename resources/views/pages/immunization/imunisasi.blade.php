@@ -3,15 +3,15 @@
 @section('content')
     <div class="container">
         <h1 class="h3 mb-2 mt-4 text-center text-gray-800">Imunisasi</h1>
-            @for ($index = 0; $index < count($id); $index++)
+            
                 
             
-                    <a class="btn btn-primary mb-3" href="immunization/create">Tambah Imunisasi Anak</a>
+                    <a class="btn btn-primary mb-3" href="/immunization/create/{{ $id_anak->id }}">Tambah Imunisasi Anak</a>
 
                     <nav aria-label="...">
                         <ul class="pagination">
                             <li class="page-item active" aria-current="page"><a class="page-link" href="#">Data Imunisasi</a></li>
-                            <li class="page-item"><a class="page-link" href="/{{ $id[$index]->id }}/immunization/child/">Data Imunisasi Anak</a></li>
+                            <li class="page-item"><a class="page-link" href="/immunization/child/{{ $id_anak->id }}">Data Imunisasi Anak</a></li>
                         </ul>
                     </nav>
                    
@@ -271,7 +271,7 @@
                             @endif
                         @endforeach
                     </div>
-            @endfor
+           
 
                     
     </div>

@@ -10,10 +10,11 @@ class ImmunizationController extends Controller
 {
     public function index($id)
     {
+        $id_anak = Child::find($id);
         return view('pages/immunization/imunisasi', [
             "title" => "Imunisasi",
             "imunisasi" => Immunization::all(),
-            "id" => Child::find($id)
+            "id_anak" => $id_anak
         ]);
     }
 

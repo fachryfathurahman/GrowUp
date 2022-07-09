@@ -7,16 +7,16 @@
                         <form action="store" method="POST">
                             @csrf
 
-                                <input type="hidden" name="id_anak" value="{{ $id_anak }}">
+                                <input type="hidden" name="id_anak" value="{{ $id_anak->id }}">
 
                                 <div class="mb-3">
                                   <label for="nama" class="form-label font-weight-bold">Nama</label>
-                                  <p>Giano Lucky Ibrahim Ling</p>
+                                  <p>{{ $id_anak->name }}</p>
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="umur" class="form-label font-weight-bold">Umur</label>
-                                    <p>1 Tahun</p>
+                                    <p>{{ $id_anak->age }} Bulan</p>
                                 </div>
                                 
                                 <div class="mb-3">
