@@ -118,12 +118,25 @@
                                 <p>Anak anda berumur {{ $ages[$index] }} Bulan</p>
                                 <?php
                                 switch ($ages[$index]) {
+                                    case 6:
+                                        echo '<p>Jangan lupa melakukan check up rutin ke dokter anak</p>';
+                                        break;
                                     case 12:
                                         echo '<p>jangan lupa memberikan asi ke anak anda</p>';
                                         break;
                                     case 24:
                                         echo '<p>Anda sudah bisa melepas pemberian asi kepada anak anda</p>';
                                         break;
+                                    case 36:
+                                        echo '<p>Penuhi kebutuhan nutrisi anak anda sesuai rekomendasi dari GrowUp</p>';
+                                        break;
+                                    case 48;
+                                        echo '<p>Berikan Makanan 4 Sehat 5 Sempurna</p>';
+                                        break;
+                                    case 60;
+                                        echo '<p>Penuhi Seluruh Vaksinasi dan Imunisasi anak anda, Sebelum melewati usia 5 tahun</p>';
+                                        break;
+        
                                 }
                                 ?>
                                 <span class="mr-2">
