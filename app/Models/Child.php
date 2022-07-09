@@ -29,7 +29,7 @@ class Child extends Model
 
     public function immunization()
     {
-        return $this->hasMany(Immunization::class, 'toi_id', 'id');
+        return $this->hasMany(Immunization::class);
     }
 
     public function user()
