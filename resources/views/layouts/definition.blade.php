@@ -38,7 +38,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <@include('includes.dashboard.topbar');
+                @include('includes.dashboard.topbar');
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
@@ -52,23 +52,7 @@
                     <!-- Content Row -->
                     <div class="row">
 
-                        <!-- Content Column -->
-                        <div class="col-lg-6 mb-4">
-                            <!-- Approach -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Stunting di Indonesia</h6>
-                                </div>
-                                
-                                <div class="card-body">
-                                    <div class="text-center">
-                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
-                                            src="img/cegah_stunting.webp" alt="...">
-                                    </div>
-                                    <p>Kejadian balita pendek (stunting) masih menjadi masalah gizi utama yang dihadapi Indonesia, tetapi informasi tentang stunting yang kurang memadai menimbulkan cukup banyak kesalahpahaman di masyarakat seperti menganggap stunting hanyalah sekedar kondisi wajar tentang tinggi badan kurang bahkan beberapa orang tua belum mengetahui tentang stunting (Harmoko, 2017). </p>
-                                </div>
-                            </div>
-                        </div>
+
 
                         <div class="col-lg-6 mb-4">
 
@@ -89,6 +73,23 @@
                             
 
                         </div>
+
+                        <div class="col-lg-6 mb-4">
+                            <!-- Approach -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Stunting di Indonesia</h6>
+                                </div>
+                                
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                                            src="img/cegah_stunting.webp" alt="...">
+                                    </div>
+                                    <p>Kejadian balita pendek (stunting) masih menjadi masalah gizi utama yang dihadapi Indonesia, tetapi informasi tentang stunting yang kurang memadai menimbulkan cukup banyak kesalahpahaman di masyarakat seperti menganggap stunting hanyalah sekedar kondisi wajar tentang tinggi badan kurang bahkan beberapa orang tua belum mengetahui tentang stunting (Harmoko, 2017). </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -98,7 +99,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <@include('includes.dashboard.footer')
+            @include('includes.dashboard.footer')
             <!-- End of Footer -->
 
         </div>
@@ -120,7 +121,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
+                        <span aria-hidden="true"></span>
                     </button>
                 </div>
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
