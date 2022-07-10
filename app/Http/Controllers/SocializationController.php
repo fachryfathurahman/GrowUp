@@ -6,16 +6,20 @@ use Illuminate\Http\Request;
 
 class SocializationController extends Controller
 {
-    public function prevention(){
+    public function prevention()
+    {
         return view('layouts.prevention');
     }
-    public function cause(){
+    public function cause()
+    {
         return view('layouts.cause');
     }
-    public function definition(){
+    public function definition()
+    {
         return view('layouts.definition');
     }
-    public function impact(){
+    public function impact()
+    {
         return view('layouts.impact');
     }
 }

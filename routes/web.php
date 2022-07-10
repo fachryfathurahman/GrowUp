@@ -4,6 +4,7 @@ use App\Http\Controllers\ChildController;
 use App\Http\Controllers\ChildImunController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ImmunizationController;
+use App\Http\Controllers\SocializationController;
 use App\Http\Controllers\TypeOfImmunizationController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -69,4 +70,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/immunization/create/store', [ChildImunController::class, 'store']);
 
     Route::get('/immunization/child/{id}', [ChildImunController::class, 'index']);
+
+    Route::get('/impact', [SocializationController::class, 'impact']);
+    Route::get('/impact', [SocializationController::class, 'cause']);
+    Route::get('/impact', [SocializationController::class, 'prevention']);
+    Route::get('/impact', [SocializationController::class, 'definition']);
 });
