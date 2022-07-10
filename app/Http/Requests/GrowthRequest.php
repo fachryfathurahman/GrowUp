@@ -25,9 +25,9 @@ class GrowthRequest extends FormRequest
     {
         return [
             'child_id'=>'required|integer',
-            'height'=>'required|integer|max:3',
-            'weight'=>'required|integer|max:3',
-            'zScore'=>'required|alpha_num'
+            'height'=>'nullable|integer|max:3',
+            'weight'=>'nullable|integer|max:3',
+            'zScore'=>'nullable|alpha_num'
         ];
     }
 }
