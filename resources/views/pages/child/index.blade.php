@@ -6,7 +6,7 @@
 
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+            <h1 class="h3 text-gray-800">Dashboard</h1>
         </div>
 
         <!-- Project Card Example -->
@@ -63,7 +63,7 @@
         </div>
 
         <!-- Content Row -->
-        <div class="row">
+        {{-- <div class="row">
 
             <!-- Earnings (Monthly) Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
@@ -146,7 +146,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         
         <!-- Content Row -->
         <div class="row">
@@ -168,12 +168,25 @@
                                 <p>Anak anda berumur {{ $ages[$index] }} Bulan</p>
                                 <?php
                                 switch ($ages[$index]) {
+                                    case 6:
+                                        echo '<p>Jangan lupa melakukan check up rutin ke dokter anak</p>';
+                                        break;
                                     case 12:
                                         echo '<p>jangan lupa memberikan asi ke anak anda</p>';
                                         break;
                                     case 24:
                                         echo '<p>Anda sudah bisa melepas pemberian asi kepada anak anda</p>';
                                         break;
+                                    case 36:
+                                        echo '<p>Penuhi kebutuhan nutrisi anak anda sesuai rekomendasi dari GrowUp</p>';
+                                        break;
+                                    case 48;
+                                        echo '<p>Berikan Makanan 4 Sehat 5 Sempurna</p>';
+                                        break;
+                                    case 60;
+                                        echo '<p>Penuhi Seluruh Vaksinasi dan Imunisasi anak anda, Sebelum melewati usia 5 tahun</p>';
+                                        break;
+        
                                 }
                                 ?>
                                 <span class="mr-2">

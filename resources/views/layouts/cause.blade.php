@@ -38,7 +38,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <@include('includes.dashboard.topbar')
+                @include('includes.dashboard.topbar')
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->

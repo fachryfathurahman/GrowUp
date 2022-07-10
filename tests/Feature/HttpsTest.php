@@ -17,7 +17,8 @@ class HttpsTest extends TestCase
     {
         $response = $this->get('/login');
 
-        $response->assertStatus(200);
+        // because redirect
+        $response->assertStatus(302);
     }
 
     // public function test_child_index()
@@ -49,4 +50,5 @@ class HttpsTest extends TestCase
         $this->assertAuthenticated();
         $response->assertRedirect('/home');
     }
+
 }
