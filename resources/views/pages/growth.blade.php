@@ -43,8 +43,29 @@
                                     var height =parseFloat(document.getElementById('height').value);
                                     var weight =parseFloat(document.getElementById('weight').value);
                                     var age =parseFloat(document.getElementById('child_age').value);
-                                    var zScore = (height+weight)*age;//Z Score Calculation here
-                                    document.getElementById('zscore').value=zScore;
+
+                                    if ( age <= 3 ) {
+                                        var zScore = ((weight - 6.3)/(6.3 - 5.8));//Z Score Calculation here
+                                        document.getElementById('zscore').value=zScore;
+                                    } else if ( age <= 11 ) {
+                                        var zScore = ((weight - 9)/(9 - 8.3));//Z Score Calculation here
+                                        document.getElementById('zscore').value=zScore;
+                                    } else if ( age <= 23 ) {
+                                        var zScore = ((weight - 10)/(10 - 9.8));//Z Score Calculation here
+                                        document.getElementById('zscore').value=zScore;
+                                    } else if ( age <= 35 ) {
+                                        var zScore = ((weight - 12.6)/(12.6 - 11.6));//Z Score Calculation here
+                                        document.getElementById('zscore').value=zScore;
+                                    } else if ( age <= 47 ) {
+                                        var zScore = ((weight - 14.8)/(14.8 - 13.6));//Z Score Calculation here
+                                        document.getElementById('zscore').value=zScore;
+                                    } else {
+                                        var zScore = ((weight - 16.8)/(16.8 - 15.4));//Z Score Calculation here
+                                        document.getElementById('zscore').value=zScore;
+                                    }
+
+                                    // var zScore = (height+weight)*age;//Z Score Calculation here
+                                    // document.getElementById('zscore').value=zScore;
                                     
                                 }
                             </script>
