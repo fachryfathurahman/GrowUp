@@ -15,11 +15,10 @@ class GrowthFactory extends Factory
     {
         return [
             'child_id' => mt_rand(1, 5),
-            'growth_date' => $this->faker->dateTimeThisYear(),
-            'age' => mt_rand(1, 5),
+            // 'growth_date' => $this->faker->dateTimeThisYear(),
+            // 'age' => mt_rand(1, 5),
             'height' => mt_rand(50, 90),
             'weight' => mt_rand(8, 15),
-            'head' => mt_rand(8, 15),
             'zScore' => mt_rand(0, 5),
             // 'first_month_weight' => $this->faker->randomFloat(1, 3, 5),
             // 'sixth_month_weight' => $this->faker->randomFloat(1, 6, 9),
