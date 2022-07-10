@@ -19,7 +19,7 @@ class CreateGrowthsTable extends Migration
             $table->foreign('child_id')->references('id')->on('children')->onDelete('cascade');
             $table->integer('height');
             $table->integer('weight');
-            $table->integer('zScore');
+            $table->float('zScore');
             $table->timestamps();
             $table->softDeletes();
             // $table->integer('first_month_weight');

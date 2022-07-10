@@ -15,7 +15,7 @@ class HttpsTest extends TestCase
      */
     public function test_root_path()
     {
-        $response = $this->get('/');
+        $response = $this->get('/login');
 
         // because redirect
         $response->assertStatus(302);
@@ -28,13 +28,27 @@ class HttpsTest extends TestCase
     //     $response->assertStatus(200);
     // }
 
-    // public function test_child_create()
-    // {
-    //     $user = User::factory()->create();
+   // public function test_child_create()
+   // {
+      //  $user = User::factory()->create();
 
-    //     $response = $this->actingAs($user)
-    //         // ->withSession(['banned' => false])
-    //         ->get('/child');
-    //     $response->assertStatus(200);
-    // }
+        //$response = $this->actingAs($user)
+            // ->withSession(['banned' => false])
+       //     ->get('/child');
+      //  $response->assertStatus(200);
+   // }
+
+    public function test_login()
+    {
+        $user = User::factory()->create();
+ 
+        $response = $this->post('/login', [
+            'email' => $user->email,
+            'password' => 'password',
+        ]);
+ 
+        $this->assertAuthenticated();
+        $response->assertRedirect('/home');
+    }
+
 }

@@ -24,6 +24,10 @@ class GrowthRequest extends FormRequest
     public function rules()
     {
         return [
+            'child_id'=>'required|integer',
+            'height'=>'nullable|integer|max:3',
+            'weight'=>'nullable|integer|max:3',
+            'zScore'=>'nullable|alpha_num'
         ];
     }
 }

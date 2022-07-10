@@ -24,7 +24,10 @@ class ParentRequest extends FormRequest
     public function rules()
     {
         return [
-            //'name'=>'requred'
+            'name'=>'requred|max:30',
+            'age'=>'required|numeric|min:1|max:3',
+            'phone'=>'required|numeric|min:10|max:13',
+            'email'=>'required|max:50'
         ];
     }
 }
