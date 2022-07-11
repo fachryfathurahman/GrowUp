@@ -14,7 +14,7 @@
                     <br/>
                     <form method="post" action="/child/growth/store/{{$growths->child_id}}"> 
                         {{ csrf_field() }}
-
+                        {{ method_field('PUT') }}
                         
                         <div class="form-group row">
                             <div class="col-sm-6 mb-3 mb-sm-0">

@@ -29,7 +29,7 @@ class ChildController extends Controller
         return view('pages.child.edit', ['childs' => $childs]);
     }
 
-    public function update($id, ChildRequest $request)
+    public function update($id, Request $request)
     {
         Child::find($id)->update($request->all());
         return redirect('/');
