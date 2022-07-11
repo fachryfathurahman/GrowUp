@@ -22,8 +22,4 @@ class LoginTest extends TestCase
 
         $response->assertRedirect('/home');
     }
-
-    public function test_user_cannot_login_with_incorrect_password()
-    {
-    }
 }
