@@ -16,7 +16,6 @@ class CreateChildrenTable extends Migration
         Schema::create('children', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->char('name', 30);
-            $table->integer('age');
             $table->enum('gender', ['male', 'female']);
             $table->date('birthday');
             $table->enum('breast_milk', ['yes', 'no']);

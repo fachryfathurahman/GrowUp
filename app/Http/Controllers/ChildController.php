@@ -20,7 +20,7 @@ class ChildController extends Controller
     {
         $data = $request->all();
         Child::create($data);
-        return redirect('/');
+        return redirect('/home');
     }
 
     public function edit($id)
