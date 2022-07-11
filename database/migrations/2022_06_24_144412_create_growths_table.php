@@ -17,9 +17,9 @@ class CreateGrowthsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('child_id');
             $table->foreign('child_id')->references('id')->on('children')->onDelete('cascade');
-            $table->integer('height');
-            $table->integer('weight');
-            $table->float('zScore');
+            $table->integer('height')->nullable();
+            $table->integer('weight')->nullable();
+            $table->float('zScore')->nullable();
             $table->timestamps();
             $table->softDeletes();
             // $table->integer('first_month_weight');

@@ -57,10 +57,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 
     route::get('/prevention', 'App\Http\Controllers\SocializationController@prevention');
-    route::get(
-        '/cause',
-        'App\Http\Controllers\SocializationController@cause'
-    );
+    route::get('/cause','App\Http\Controllers\SocializationController@cause');
     route::get('/definition', 'App\Http\Controllers\SocializationController@definition');
     route::get('/impact', 'App\Http\Controllers\SocializationController@impact');
 
@@ -71,8 +68,8 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/immunization/child/{id}', [ChildImunController::class, 'index']);
 
-    Route::get('/impact', [SocializationController::class, 'impact']);
-    Route::get('/impact', [SocializationController::class, 'cause']);
-    Route::get('/impact', [SocializationController::class, 'prevention']);
-    Route::get('/impact', [SocializationController::class, 'definition']);
+    // Route::get('/impact', [SocializationController::class, 'impact']);
+    // Route::get('/cause', [SocializationController::class, 'cause']);
+    // Route::get('/prevention', [SocializationController::class, 'prevention']);
+    // Route::get('/definition', [SocializationController::class, 'definition']);
 });

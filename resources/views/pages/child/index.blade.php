@@ -230,7 +230,12 @@
                         <div class="card-body">
                             <div class="chart-area">
                                 <!--<canvas id="myAreaChart"></canvas>-->
-                                <p>zScore anak anda sekarang adalah {{ $childs[$index]->height }}</p>
+                                @if (empty($childs[$index]['growth'][0]->zScore))
+                                <p>zScore anak anda belum ada, Isi update perkembangan anak sekarang</p>
+                                @else 
+                                <p>zScore anak anda sekarang adalah {{ $childs[$index]['growth'][0]->zScore}}</p>
+                                @endif
+                                
                             </div>
                             <a href="/child/growth/{{ $childs[$index]->id }}" class="btn btn-primary btn-icon-split mb-3">
                                 <span class="icon text-white-50">

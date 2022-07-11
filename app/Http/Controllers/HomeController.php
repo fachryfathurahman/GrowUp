@@ -30,6 +30,7 @@ class HomeController extends Controller
     {
         $user_id=Auth::user()->id;
         $childs = Child::with('growth')->get();
+
         //$growths = Growth::all();
 
         $ages = array();
