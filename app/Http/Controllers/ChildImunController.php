@@ -6,6 +6,7 @@ use App\Models\Child;
 use App\Models\ChildImun;
 use App\Models\Immunization;
 use Illuminate\Http\Request;
+use DateTime;
 
 class ChildImunController extends Controller
 {
@@ -22,12 +23,17 @@ class ChildImunController extends Controller
     public function create($id)
     {
         $id_anak = Child::find($id);
+        $ages = array();
+            $birthday  = new DateTime($id_anak['birthday']);
+            $currenttime = new DateTime();
+            $age = $currenttime->diff($birthday)->format("%a") / 30;
+
         return view('pages/immunization/createimmunizationchild', [
             "title" => "Imunisasi",
             "imunisasi" => ChildImun::all(),
             "imunanak" => Immunization::all(),
-            "id_anak" => $id_anak
-
+            "id_anak" => $id_anak,
+            "umur_anak"=>(int)$age
         ]);
     }
 

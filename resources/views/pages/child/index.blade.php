@@ -28,18 +28,12 @@
 
                             </div>
                             <div class="col-sm-6">
-                                Umur <input type="number" class="form-control form-control-user" name="age"
-                                    required="required">
+                                User ID (percobaan) <input type="text" class="form-control form-control-user"
+                                    name="user_id" value="{{Auth::user()->id}}" required="required" readonly>
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <div class="col-sm-6 mb-3 mb-sm-0">
-                                User ID (percobaan) <input type="text" class="form-control form-control-user"
-                                    name="user_id" required="required">
-                            </div>
-                            <div class="col-sm-6">
-                                Tanggal Lahir <input type="date" name="birthday" required="required"> <br />
-                            </div>
+                        <div class="form-group">
+                            Tanggal Lahir <input type="date" class="form-control form-control-user" name="birthday" required="required"> <br />
                         </div>
 
                         <div class="form-group row">
@@ -236,7 +230,12 @@
                         <div class="card-body">
                             <div class="chart-area">
                                 <!--<canvas id="myAreaChart"></canvas>-->
-                                <p>zScore anak anda sekarang adalah {{ $growths[$index]->zScore }}</p>
+                                @if (empty($childs[$index]['growth'][0]->zScore))
+                                <p>zScore anak anda belum ada, Isi update perkembangan anak sekarang</p>
+                                @else 
+                                <p>zScore anak anda sekarang adalah {{ $childs[$index]['growth'][0]->zScore}}</p>
+                                @endif
+                                
                             </div>
                             <a href="/child/growth/{{ $childs[$index]->id }}" class="btn btn-primary btn-icon-split mb-3">
                                 <span class="icon text-white-50">

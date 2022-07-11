@@ -18,13 +18,7 @@
 
                         </div>
                         <div class="col-sm-6">
-                            Umur <input type="number" class="form-control form-control-user" name="age" value="{{ $childs->age }}"
-                                required="required">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-6">
-                            Tanggal Lahir <input type="date" name="birthday" value="{{ $childs->birthday }}" required="required"> <br />
+                        Tanggal Lahir <input type="date" class="form-control form-control-user" name="birthday" value="{{ $childs->birthday }}" required="required"> <br />
                         </div>
                     </div>
 

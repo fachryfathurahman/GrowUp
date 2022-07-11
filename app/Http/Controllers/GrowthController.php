@@ -23,7 +23,7 @@ class GrowthController extends Controller
         return view('pages.growth', ['growths' => $growths,'age'=>(int)$age]);
     }
 
-    public function store($id,GrowthRequest $request)
+    public function store($id,Request $request)
     {
         Growth::find($id)->update($request->all());
         return redirect('/');

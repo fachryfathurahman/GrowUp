@@ -22,14 +22,14 @@ class Child extends Model
         return $this->hasManyThrough('App\Parents', 'App\Keluarga');
     }
 
-    public function medical_record()
-    {
-        return $this->hasOne(MedicalRecord::class, 'child_id', 'id');
-    }
-
     public function immunization()
     {
         return $this->hasMany(Immunization::class);
+    }
+
+    public function growth()
+    {
+        return $this->hasMany(Growth::class);
     }
 
     public function user()

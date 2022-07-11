@@ -16,7 +16,7 @@
 
                                 <div class="mb-3">
                                     <label for="umur" class="form-label font-weight-bold">Umur</label>
-                                    <p>{{ $id_anak->age }} Bulan</p>
+                                    <p>{{ $umur_anak }} Bulan</p>
                                 </div>
                                 
                                 <div class="mb-3">
